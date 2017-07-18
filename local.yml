@@ -1,0 +1,21 @@
+---
+applications:
+- name: spring-music
+  memory: 1G
+  env:
+    SPRING_PROFILES_ACTIVE: mysql
+  services:
+    p-mysql:
+      - name: mysql
+        credentials:
+          hostname: mysql-broker.local.pcfdev.io
+          jdbcUrl: jdbc:mysql://mysql-broker.local.pcfdev.io:3306/cf_b2a3f2a1_cac9_4a41_89e8_c689af0f7bb7?user=sh9r33bL1ofExijQ&password=nK6HnU4nXTyUrap8
+          name: cf_b2a3f2a1_cac9_4a41_89e8_c689af0f7bb7
+          password: nK6HnU4nXTyUrap8
+          port: 3306
+          uri: mysql://sh9r33bL1ofExijQ:nK6HnU4nXTyUrap8@mysql-broker.local.pcfdev.io:3306/cf_b2a3f2a1_cac9_4a41_89e8_c689af0f7bb7?reconnect=true
+          username: sh9r33bL1ofExijQ
+        plan: 512mb
+        tags:
+        - mysql
+        label: p-mysql
